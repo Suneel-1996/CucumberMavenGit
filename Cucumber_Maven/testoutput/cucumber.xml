@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="62.942">
+<testcase classname="Login Feature" name="Login with different users" time="25.321">
+<system-out><![CDATA[Given I am able to view/navigate to login page..............................passed
+When I update the user name as "linda.anderson".............................passed
+And I update the pass word as "linda.anderson"..............................passed
+And I click on the login button.............................................passed
+Then I should see the user name as "Welcome Rushikesh"......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Feature" name="Login with different users 2" time="23.72">
+<failure message="expected:&lt;Welcome [Linda]&gt; but was:&lt;Welcome [Rushikesh]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given I am able to view/navigate to login page..............................passed
+When I update the user name as "linda.anderson".............................passed
+And I update the pass word as "linda.anderson"..............................passed
+And I click on the login button.............................................passed
+Then I should see the user name as "Welcome Rushikesh"......................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<Welcome [Linda]> but was:<Welcome [Rushikesh]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefenition.Login.i_should_see_the_user_name_as(Login.java:73)
+	at ✽.I should see the user name as "Welcome Rushikesh"(file:///D:/sunil/eclipse-workspace/Cucumber_Maven/src/test/resources/Login/Login.feature:60)
+]]></failure>
+</testcase>
+<testcase classname="Login Feature" name="Negative Login" time="13.57">
+<system-out><![CDATA[Given I am able to view/navigate to login page..............................passed
+When I update the user name as "kuchbhi"....................................passed
+And I update the pass word as "kuchbhi".....................................passed
+And I click on the login button.............................................passed
+Then I should see the error message as "Invalid credentials"................passed
+]]></system-out>
+</testcase>
+</testsuite>
